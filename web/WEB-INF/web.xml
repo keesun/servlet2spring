@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+
+	<display-name>servlet2spring</display-name>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>helloServlet</servlet-name>
+		<servlet-class>whiteship.HelloServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>helloServlet</servlet-name>
+		<url-pattern>/hello</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>helloServletModel2</servlet-name>
+		<servlet-class>whiteship.HelloServletModel2</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>helloServletModel2</servlet-name>
+		<url-pattern>/hello2</url-pattern>
+	</servlet-mapping>
+	
+	<filter>
+		<filter-name>timer</filter-name>
+		<filter-class>whiteship.TimerFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>timer</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<servlet>
+		<servlet-name>whiteship</servlet-name>
+		<servlet-class>whiteship.WhiteshipServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>whiteship</servlet-name>
+		<url-pattern>/app/*</url-pattern>
+	</servlet-mapping>
+
+</web-app>
